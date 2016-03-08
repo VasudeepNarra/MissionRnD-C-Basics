@@ -15,7 +15,7 @@ ERROR CASES:
 NOTES: 		use stdarg.h header.
 */
 
-int variableArguments(int arg_count, int *argv[ ])
+int variableArguments(int arg_count,...)
 {
 	int val;
 	va_list ap;
