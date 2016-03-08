@@ -48,10 +48,67 @@ int isOlder(char *dob1, char *dob2)
 
 	} // end of while loop
 
+	if (month1 <= 0 || month1>12 || month2 <= 0 || month2 > 12)
 
-
-
-
+	{
+		return -1;
+	}
+	if (year1%400==0)
+	{
+		if (month1 == 2 && day1 > 29)
+		{
+			return -1;
+		}
+	}
+	else if (year1 % 100 == 0)
+	{
+		if (month1 == 2 && day1 > 28)
+		{
+			return -1;
+		}
+	}
+	else if (year1 % 4 == 0)
+	{
+		if (month1 == 2 && day1 > 29)
+		{
+			return -1;
+		}
+	}
+	else
+	{
+		if (month1 == 2 && day1 > 28)
+		{
+			return -1;
+		}
+	}
+	if (year2% 400 == 0)
+	{
+		if (month2 == 2 && day2 > 29)
+		{
+			return -1;
+		}
+	}
+	else if (year2 % 100 == 0)
+	{
+		if (month2 == 2 && day2 > 28)
+		{
+			return -1;
+		}
+	}
+	else if (year2 % 4 == 0)
+	{
+		if (month2 == 2 && day2 > 29)
+		{
+			return -1;
+		}
+	}
+	else
+	{
+		if (month2 == 2 && day2 > 28)
+		{
+			return -1;
+		}
+	}
 	if (year1 != year2)
 	{
 		if (year1 < year2) return 1;

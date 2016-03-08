@@ -39,8 +39,8 @@ int main(){
 
 	*/
 	//Is Older 
-	char date1[20] = "29-02-2004";
-	char date2[20] = "29-02-2000";
+	char date1[20] = "29-02-2001";
+	char date2[20] = "29-02-2008";
 	int check=isOlder(date1, date2);
 	if (check == 0){
 		printf("Both are of same age \n");
